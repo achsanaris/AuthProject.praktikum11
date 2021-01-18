@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "580249875208",
+    "project_id": "fir-ppb2021-7198d",
+    "storage_bucket": "fir-ppb2021-7198d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:580249875208:android:41b605c671dbfa16ebb2bd",
+        "android_client_info": {
+          "package_name": "project.achsan.authproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "580249875208-jdqd44408155luu06n2tupo8bvvjuonc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTZpHdGK8MKDLdt6WBR6iNjE7xe9XXvIE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "580249875208-jdqd44408155luu06n2tupo8bvvjuonc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
