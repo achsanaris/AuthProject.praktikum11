@@ -6,13 +6,13 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.view.View
 import android.widget.Toast
+import androidx.core.view.isVisible
 import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import project.achsan.authproject.R
-import project.achsan.authproject.databinding.ActivityMainBinding
+import project.achsan.praktikum11.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var auth: FirebaseAuth
@@ -41,6 +41,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
         binding.btnSignOut.setOnClickListener(this)
         binding.btnEmailVerify.setOnClickListener(this)
+        binding.btnDashboardQuote.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -50,6 +51,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.btnEmailVerify -> {
                 sendEmailVerification()
+            }
+            R.id.btnDashboardQuote -> {
+                val intent = Intent(this@MainActivity, DashboardQuoteActivity::class.java)
+                startActivity(intent)
             }
         }
     }

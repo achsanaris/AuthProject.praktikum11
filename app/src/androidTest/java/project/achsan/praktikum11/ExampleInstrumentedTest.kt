@@ -1,4 +1,4 @@
-package project.achsan.authproject
+package project.achsan.praktikum11
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

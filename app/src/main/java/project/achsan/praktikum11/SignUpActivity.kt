@@ -8,8 +8,7 @@ import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import project.achsan.authproject.R
-import project.achsan.authproject.databinding.ActivitySignUpBinding
+import project.achsan.praktikum11.databinding.ActivitySignUpBinding
 
 class SignUpActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var auth: FirebaseAuth

@@ -1,4 +1,4 @@
-package project.achsan.authproject
+package project.achsan.praktikum11
 
 import org.junit.Test
 
