@@ -11,7 +11,7 @@ repositories {
 
 android {
     compileSdkVersion 30
-    buildToolsVersion "30.0.3"
+    buildToolsVersion "30.0.2"
     defaultConfig {
         applicationId "project.achsan.authproject"
         minSdkVersion 19
@@ -57,4 +57,5 @@ dependencies {
     testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.google.firebase:firebase-firestore-ktx'
 }

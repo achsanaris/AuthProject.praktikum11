@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">AuthProject</string>
+    <string name="title">Judul</string>
+    <string name="description">Deskripsi</string>
+    <string name="category">Kategori</string>
+    <string name="submit">SUBMIT</string>
+    <string name="date">tanggal</string>
 </resources>

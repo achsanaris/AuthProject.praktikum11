@@ -15,8 +15,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import project.achsan.authproject.R
-import project.achsan.authproject.databinding.ActivitySignInBinding
+import project.achsan.praktikum11.databinding.ActivitySignInBinding
 
 class SignInActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var auth: FirebaseAuth
