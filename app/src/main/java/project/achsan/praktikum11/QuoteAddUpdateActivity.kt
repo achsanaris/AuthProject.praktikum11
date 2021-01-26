@@ -87,8 +87,9 @@ class QuoteAddUpdateActivity : AppCompatActivity(), View.OnClickListener {
                 setCategories(categoriesSpinnerArray)
             }
             .addOnFailureListener { exception ->
-                Toast.makeText(this@QuoteAddUpdateActivity, "Categories cannot be
-                        retrieved ", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@QuoteAddUpdateActivity, "Categories cannot be retrieved ",
+
+                    Toast.LENGTH_SHORT).show()
             }
         return categoriesSpinnerArray
     }
