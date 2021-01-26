@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -20,6 +21,7 @@ import project.achsan.praktikum11.helper.ALERT_DIALOG_CLOSE
 import project.achsan.praktikum11.helper.ALERT_DIALOG_DELETE
 import project.achsan.praktikum11.helper.EXTRA_POSITION
 import project.achsan.praktikum11.helper.EXTRA_QUOTE
+import project.achsan.praktikum11.helper.RESULT_ADD
 
 class QuoteAddUpdateActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var auth: FirebaseAuth
@@ -122,6 +124,26 @@ class QuoteAddUpdateActivity : AppCompatActivity(), View.OnClickListener {
             if (isEdit) {
 
             } else {
+                val currentUser = auth.currentUser
+                val user = hashMapOf(
+                    "uid" to currentUser?.uid,
+                    "title" to title,
+                    "description" to description,
+                    "category" to categoryName,
+                    "date" to FieldValue.serverTimestamp()
+                )
+                firestore.collection("quotes")
+                    .add(user)
+                    .addOnSuccessListener { documentReference ->
+                        Toast.makeText(this@QuoteAddUpdateActivity,
+                            "DocumentSnapshot added with ID: ${documentReference.id}",
+                            Toast.LENGTH_SHORT).show()
+                        setResult(RESULT_ADD, intent)
+                        finish()
+                    }
+                    .addOnFailureListener { e ->
+                        Toast.makeText(this@QuoteAddUpdateActivity, "Error adding document", Toast.LENGTH_SHORT).show()
+                    }
 
             }
         }
