@@ -34,6 +34,8 @@ class DashboardQuoteActivity : AppCompatActivity() {
         firestore = Firebase.firestore
         auth = Firebase.auth
         setContentView(binding.root)
+        firestore = Firebase.firestore
+        auth = Firebase.auth
         supportActionBar?.title = "Quotes"
         binding.rvQuotes.layoutManager = LinearLayoutManager(this)
         binding.rvQuotes.setHasFixedSize(true)
@@ -73,7 +75,8 @@ class DashboardQuoteActivity : AppCompatActivity() {
                             binding.rvQuotes.adapter = adapter
                             adapter.listQuotes = quotesList
                         } else {
-                            adapter.listQuotes = ArrayList()
+                            adapter.listQuotes.clear()
+                            binding.rvQuotes?.adapter?.notifyDataSetChanged()
                             showSnackbarMessage("Tidak ada data saat ini")
                         }
                     }
